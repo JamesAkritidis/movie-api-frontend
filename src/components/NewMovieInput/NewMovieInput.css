@@ -1,0 +1,8 @@
+.NewMovieInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.NewMovieInput__input {
+    display: block;
+}
