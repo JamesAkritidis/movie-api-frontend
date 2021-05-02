@@ -1,0 +1,27 @@
+.NewMovieInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.NewMovieInput__input {
+    display: block;
+}
+
+.SearchResults {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+
+.SearchResult {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    border: 1px solid black;
+
+}
+
+.selected {
+    background-color: grey;
+}
