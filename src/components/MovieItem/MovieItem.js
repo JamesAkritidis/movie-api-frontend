@@ -1,4 +1,5 @@
 import React from "react";
+import "./MovieItem.css";
 
 function MovieItem({ movie }) {
     return (

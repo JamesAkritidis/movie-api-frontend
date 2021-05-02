@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAddMovie from "../../hooks/useAddMovie";
+import { movieSchema } from "../../utils/movieItemSchema";
 import "./NewMovieInput.css";
 
-function NewMovieInput() {
+function NewMovieInput({ movieData }) {
     const { userid } = useParams();
-    const [movieAttributes, movieInput, addMovie, setMovieInput] = useAddMovie(
-        userid
-    );
+    const [movieInput, addMovie, setMovieInput] = useAddMovie(userid);
+
+    useEffect(() => {
+        if (movieData) {
+            setMovieInput({ ...movieData });
+        }
+    }, [movieData]);
 
     return (
         <div className="NewMovieInput">
-            {movieAttributes.map((movieAttribute, index) => (
+            {movieSchema.map((movieAttribute, index) => (
                 <input
                     className="NewMovieInput__input"
                     key={index}

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import useUsersFetch from "../../hooks/useUsersFetch";
+import "./Sidebar.css";
 
 function Sidebar() {
     const users = useUsersFetch();
