@@ -3,7 +3,7 @@ import "./MovieItem.css";
 
 function MovieItem({ movie }) {
     return (
-        <div className="MovieItem">
+        <div className="Movie-Item">
             <div>Title: {movie.title}</div>
             <div>Director: {movie.director}</div>
             <div>Screenwriter: {movie.screenwriter}</div>
