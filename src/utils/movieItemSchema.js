@@ -4,6 +4,22 @@ const movieSchema = [
         type: "text",
     },
     {
+        name: "year",
+        type: "number",
+    },
+    {
+        name: "runtime",
+        type: "number",
+    },
+    {
+        name: "genre",
+        type: "text",
+    },
+    {
+        name: "overview",
+        type: "text",
+    },
+    {
         name: "director",
         type: "text",
     },
@@ -16,28 +32,16 @@ const movieSchema = [
         type: "text",
     },
     {
-        name: "runtime",
-        type: "number",
-    },
-    {
-        name: "year",
-        type: "number",
-    },
-    {
-        name: "rating",
-        type: "number",
+        name: "imdbLink",
+        type: "text",
     },
     {
         name: "poster",
         type: "text",
     },
     {
-        name: "platform",
-        type: "text",
-    },
-    {
-        name: "genre",
-        type: "text",
+        name: "watched",
+        type: "checkbox",
     },
 ];
 

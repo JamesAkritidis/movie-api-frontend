@@ -3,12 +3,11 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    width: 40%;
-    height: 50%;
-    top: 30%;
-    left: 30%;
+    width: 50%;
+    top: 15vh;
     background: #212121;
     padding: 3rem;
+    z-index: 50;
 }
 
 
@@ -18,5 +17,5 @@
 }
 
 .InputModal__input {
-    width: 50%;
+    width: 70%;
 }

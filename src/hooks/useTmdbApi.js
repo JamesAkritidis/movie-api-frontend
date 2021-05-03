@@ -30,31 +30,52 @@ function useTmdbData(movieSearch, userid) {
         }
     }, [movieSearch]);
 
-    const selectMovie = (index) => {
-        axios
-            .get(
+    const selectMovie = async (index) => {
+        try {
+            const basicData = await axios.get(
                 `${apiUrl}movie/${searchResults[index].id}?api_key=${apiTmdb}&language=en-US`
-            )
-            .then((result) => {
-                console.log(result.data);
-                handleMovieData(result.data);
-                setSearchResults("");
-            })
-            .catch(() => console.log("selected movie request failed"));
+            );
+            const creditsData = await axios.get(
+                `${apiUrl}movie/${searchResults[index].id}/credits?api_key=${apiTmdb}&language=en-US`
+            );
+
+            handleMovieData(basicData.data, creditsData.data);
+            console.log(creditsData.data);
+
+            setSearchResults("");
+        } catch {
+            console.log("selected movie request failed");
+        }
     };
 
-    const handleMovieData = (data) => {
+    const handleMovieData = (basicData, creditsData) => {
+        const directors = creditsData.crew.filter(
+            (crew) => crew.job === "Director"
+        );
+        const screenwriters = creditsData.crew.filter(
+            (crew) =>
+                crew.job === "Screenplay" ||
+                crew.job === "Script" ||
+                crew.job === "Writer"
+        );
+        const cast = creditsData.cast.slice(0, 3);
+        console.log(screenwriters);
+        console.log(cast);
+        console.log(directors);
         setMovieData({
-            title: data.title,
-            overview: data.overview,
-            director: "",
-            screenwriter: "",
-            moviecast: "",
-            runtime: data.runtime,
-            year: data.release_date.slice(0, 4),
-            rating: null,
-            poster: `${baseUrl}w92/${data.poster_path}`,
-            platform: "",
+            title: basicData.title,
+            year: basicData.release_date.slice(0, 4),
+            runtime: basicData.runtime,
+            genre: basicData.genres.map((genre) => genre.name).join(", "),
+            overview: basicData.overview,
+            director: directors.map((director) => director.name).join(", "),
+            screenwriter: screenwriters
+                .map((screenwriter) => screenwriter.name)
+                .join(", "),
+            cast: cast.map((actor) => actor.name).join(", "),
+            imdbLink: `https://www.imdb.com/title/${basicData.imdb_id}`,
+            poster: `${baseUrl}w92/${basicData.poster_path}`,
+            watched: false,
             userid: userid,
         });
     };

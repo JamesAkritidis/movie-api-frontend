@@ -17,20 +17,26 @@ function NewMovieInput({ movieData }) {
     return (
         <div className="NewMovieInput">
             {movieSchema.map((movieAttribute, index) => (
-                <input
-                    className="NewMovieInput__input"
-                    key={index}
-                    type={movieAttribute.type}
-                    name={movieAttribute.name}
-                    placeholder={`add a ${movieAttribute.name}`}
-                    onChange={(e) =>
-                        setMovieInput({
-                            ...movieInput,
-                            [movieAttribute.name]: e.target.value,
-                        })
-                    }
-                    value={movieInput[movieAttribute.name]}
-                />
+                <div className="NewMovieInput__input">
+                    <label for={movieAttribute.name}>
+                        {movieAttribute.name}
+                    </label>
+                    <input
+                        className="NewMovieInput__input__field"
+                        key={index}
+                        type={movieAttribute.type}
+                        name={movieAttribute.name}
+                        id={movieAttribute.name}
+                        placeholder={`add a ${movieAttribute.name}`}
+                        onChange={(e) =>
+                            setMovieInput({
+                                ...movieInput,
+                                [movieAttribute.name]: e.target.value,
+                            })
+                        }
+                        value={movieInput[movieAttribute.name]}
+                    />
+                </div>
             ))}
 
             <input

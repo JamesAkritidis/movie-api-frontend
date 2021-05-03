@@ -6,10 +6,9 @@ function useUsersFetch() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/users")
+            .get("http://localhost:5000/users") //this url returns a Json object with the user data
             .then((response) => {
                 setUsers(response.data);
-                console.log(response.data);
             })
             .catch((error) => {
                 console.log(error);

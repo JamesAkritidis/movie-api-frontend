@@ -4,11 +4,17 @@
 }
 
 .NewMovieInput__input {
-    display: block;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    margin: 0.2em 0;
 }
 
 .SearchResults {
     display: flex;
+    position: absolute;
+    top: 5rem;
     flex-direction: column;
     width: 15rem;
 }

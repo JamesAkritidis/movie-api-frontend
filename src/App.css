@@ -17,6 +17,7 @@ border: black 1px solid;
 }
 
 .Main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
