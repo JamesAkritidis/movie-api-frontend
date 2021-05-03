@@ -1,6 +1,6 @@
 .NewMovieInput {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .NewMovieInput__input {
@@ -11,23 +11,24 @@
     margin: 0.2em 0;
 }
 
+
+
 .SearchResults {
-    display: flex;
-    position: absolute;
-    top: 5rem;
-    flex-direction: column;
-    width: 15rem;
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
 }
 
 .SearchResult {
-    width: 100%;
-    background-color: white;
-    color: black;
-    font-size: 1.2rem;
-    border: 1px solid black;
-
+  width: 150%;
+  background-color: white;
+  color: black;
+  font-size: 1.7rem;
+  border: 0.1rem solid black;
+  background: hsl(66, 70%, 51%);
+  z-index: 100;
 }
 
 .selected {
-    background-color: grey;
+  background-color: grey;
 }

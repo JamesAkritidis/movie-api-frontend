@@ -4,15 +4,19 @@
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 62.5%;
+  --header1: calc(2rem + 1vw);
+  --header2: calc(3.5rem + 1vw);
+  --header3: calc(3rem + 1vw);
+  --header4: calc(2.4rem + 1vw);
+  --text: calc(1.5rem + 1vw);
+  --big: calc(6rem + 1vw);
 }
 
 body {
-  --color-primary: #50b7f5;
-  --color-secondary: #e6ecf0;
-  /* --color-highlight: 
-  --color-background:   */
+  --color-primary: hsl(321, 76%, 10%);
+  --color-background: hsl(201, 11%, 24%);
+  --color-secondary: hsl(52, 52%, 75%);
+  --color-highlight: hsl(38, 82%, 47%);
 }
-

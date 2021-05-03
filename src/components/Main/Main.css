@@ -1,3 +1,4 @@
+
 .Main__inputModal {
     position: absolute;
     width: 100%;
@@ -6,4 +7,24 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.521);
+}
+
+.Main__button--new-movie {
+  width: 20rem;
+  height: 5rem;
+  padding: 1rem;
+  margin: 1rem;
+  background: #e1d89f;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.Main__button--new-movie:hover {
+  background-color: #d89216;
+  transition: background-color 2s;
+}
+
+.Main__movielist{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
 }

@@ -20,7 +20,7 @@ function Main() {
                 ""
             )}
             <button
-                className="Main__button--newmovie"
+                className="Main__button--new-movie"
                 onClick={() => toggleInputModal(!showInputModal)}
             >
                 Add New Movie
