@@ -12,9 +12,13 @@ function Main() {
 
     return (
         <div className="Main">
-            <div className="Main__inputModal">
-                {showInputModal ? <InputModal /> : ""}
-            </div>
+            {showInputModal ? (
+                <div className="Main__inputModal">
+                    <InputModal toggleInputModal={toggleInputModal} />
+                </div>
+            ) : (
+                ""
+            )}
             <button
                 className="Main__button--newmovie"
                 onClick={() => toggleInputModal(!showInputModal)}

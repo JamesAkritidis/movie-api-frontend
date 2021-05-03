@@ -10,6 +10,11 @@
     z-index: 50;
 }
 
+.InputModal__btn--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
 
 .InputModal__search {
     width: 50%;

@@ -66,14 +66,14 @@ function useTmdbData(movieSearch, userid) {
             title: basicData.title,
             year: basicData.release_date.slice(0, 4),
             runtime: basicData.runtime,
-            genre: basicData.genres.map((genre) => genre.name).join(", "),
+            genres: basicData.genres.map((genre) => genre.name).join(", "),
             overview: basicData.overview,
             director: directors.map((director) => director.name).join(", "),
             screenwriter: screenwriters
                 .map((screenwriter) => screenwriter.name)
                 .join(", "),
             cast: cast.map((actor) => actor.name).join(", "),
-            imdbLink: `https://www.imdb.com/title/${basicData.imdb_id}`,
+            imdblink: `https://www.imdb.com/title/${basicData.imdb_id}`,
             poster: `${baseUrl}w92/${basicData.poster_path}`,
             watched: false,
             userid: userid,

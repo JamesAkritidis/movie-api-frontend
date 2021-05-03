@@ -12,7 +12,7 @@ const movieSchema = [
         type: "number",
     },
     {
-        name: "genre",
+        name: "genres",
         type: "text",
     },
     {
@@ -32,7 +32,7 @@ const movieSchema = [
         type: "text",
     },
     {
-        name: "imdbLink",
+        name: "imdblink",
         type: "text",
     },
     {

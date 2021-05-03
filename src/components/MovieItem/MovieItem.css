@@ -1,9 +1,18 @@
 .MovieItem {
     display: flex;
-    flex-direction: column;
-    width: 30rem;
-    font-size: 1.6rem;
     margin: 1rem 0;
     border: 2px solid black;
     background-color: white;;
+}
+
+.MovieItem__poster {
+    width: 8rem;
+    height: 12rem;
+}
+
+.MovieItem__info {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    font-size: 1.6rem;
 }
