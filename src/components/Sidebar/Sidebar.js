@@ -10,7 +10,7 @@ function Sidebar() {
         <div className="Sidebar">
             {users.map((user) => (
                 <NavLink
-                    to={String(user.userid)}
+                    to={String(user.userid)} //creates route to /:userid
                     activeStyle={{
                         color: "red",
                     }}

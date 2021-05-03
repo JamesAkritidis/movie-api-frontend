@@ -12,7 +12,13 @@ function Main() {
 
     return (
         <div className="Main">
-            {showInputModal ? <InputModal /> : ""}
+            {showInputModal ? (
+                <div className="Main__inputModal">
+                    <InputModal toggleInputModal={toggleInputModal} />
+                </div>
+            ) : (
+                ""
+            )}
             <button
                 className="Main__button--new-movie"
                 onClick={() => toggleInputModal(!showInputModal)}
@@ -21,7 +27,9 @@ function Main() {
             </button>
             <div className="Main__movielist">
                 {movies.length &&
-                    movies.map((movie) => <MovieItem movie={movie} />)}
+                    movies.map((movie, index) => (
+                        <MovieItem key={index} movie={movie} />
+                    ))}
             </div>
         </div>
     );

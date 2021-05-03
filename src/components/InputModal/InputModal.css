@@ -10,7 +10,16 @@
   background: hsl(162, 63%, 41%);
   padding: 3rem;
   border-radius: 2rem;
+  }
+
+
+.InputModal__btn--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
 }
+
+
 
 .InputModal__search {
   height: 2rem;
@@ -19,6 +28,7 @@
 }
 
 .InputModal__input {
+
   width: 50%;
   margin: 1rem;
 }

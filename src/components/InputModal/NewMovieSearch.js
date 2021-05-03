@@ -45,6 +45,7 @@ function NewMovieInput({
             <input
                 type="text"
                 className="NewMovie__search"
+                placeholder="Search your movie"
                 value={movieSearch}
                 onChange={(e) => setMovieSearch(e.currentTarget.value)}
                 onKeyDown={selectSearchResult}

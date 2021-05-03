@@ -1,3 +1,14 @@
+
+.Main__inputModal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.521);
+}
+
 .Main__button--new-movie {
   width: 20rem;
   height: 5rem;
@@ -10,4 +21,10 @@
 .Main__button--new-movie:hover {
   background-color: #d89216;
   transition: background-color 2s;
+}
+
+.Main__movielist{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
 }
