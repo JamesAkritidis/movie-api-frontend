@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 
 function Header() {
-    return <div className="Header">Movie Picker</div>;
+  return <div></div>;
 }
 
 export default Header;

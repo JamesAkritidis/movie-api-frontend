@@ -4,14 +4,13 @@
 }
 
 .NewMovieInput__input {
-    display: flex;
-    color: white;
-    justify-content: space-between;
-    font-size: 1.6rem;
-    margin: 0.2em 0;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  margin: 0.2em 0;
+  height: 25px;
 }
-
-
 
 .SearchResults {
   display: flex;
@@ -31,4 +30,5 @@
 
 .selected {
   background-color: grey;
+  height: 25px;
 }

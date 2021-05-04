@@ -4,31 +4,33 @@
   align-items: center;
   position: absolute;
   width: 40%;
-  height: 50%;
+  height: 65%;
   top: 30%;
   left: 30%;
-  background: hsl(162, 63%, 41%);
+  background-image: url(./download.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 3rem;
   border-radius: 2rem;
-  }
-
-
-.InputModal__btn--close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
 }
 
-
+.InputModal__btn--close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 35px;
+  width: 60px;
+  font-size: 18px;
+}
 
 .InputModal__search {
-  height: 2rem;
+  height: 5rem;
   width: 50%;
   margin-bottom: 2rem;
+  background-color: aqua;
 }
 
 .InputModal__input {
-
   width: 50%;
-  margin: 1rem;
+  margin: 2rem;
 }
