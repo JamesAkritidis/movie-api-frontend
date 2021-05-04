@@ -1,31 +1,23 @@
-.Main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0.85;
-  border: black 1px solid;
-  background: #5b856e;
-}
-
 .Main__inputModal {
+  display: flex;
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .Main__button--new-movie {
   width: 20rem;
   height: 5rem;
   padding: 1rem;
-  margin: 1rem;
+  margin: 3rem;
   background: #e1d89f;
   border-radius: 1rem;
   cursor: pointer;
+  font-size: 20px;
 }
 .Main__button--new-movie:hover {
   background-color: #d89216;
