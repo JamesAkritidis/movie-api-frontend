@@ -1,4 +1,4 @@
-.InputModal {
+/* .InputModal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,25 +10,56 @@
   background: hsl(162, 63%, 41%);
   padding: 3rem;
   border-radius: 2rem;
-  }
-
-
-.InputModal__btn--close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+} */
+.InputModal {
+  /* background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(162, 122, 190, 1) 50%,
+    rgba(253, 187, 45, 1) 100%
+  ); */
+  background: linear-gradient(
+    0deg,
+    rgba(157, 132, 132, 1) 0%,
+    rgba(122, 190, 181, 0.8463760504201681) 50%,
+    rgba(9, 6, 23, 0.7231267507002801) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 90rem;
+  width: 60rem;
+  margin: 3rem;
+  padding-top: 2rem;
+  position: absolute;
+  border-radius: 4rem;
 }
 
-
+.InputModal__btn--close {
+  position: absolute;
+  /* top: 42rem; */
+  top: 50%;
+  right: 42%;
+  padding: 2rem;
+  width: 12rem;
+  border-radius: 2rem;
+  background: hsl(162, 63%, 41%);
+  font-size: 1.8rem;
+}
+.InputModal__btn--close:hover {
+  transition: 1s ease-in;
+  background: hsl(66, 70%, 51%);
+}
 
 .InputModal__search {
-  height: 2rem;
-  width: 50%;
+  height: 4rem;
+  width: 80%;
   margin-bottom: 2rem;
 }
 
 .InputModal__input {
-
   width: 50%;
   margin: 1rem;
+  width: 80%;
 }

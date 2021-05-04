@@ -1,12 +1,21 @@
+.Main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0.85;
+  border: black 1px solid;
+  background: #5b856e;
+}
 
 .Main__inputModal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.521);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.521);
 }
 
 .Main__button--new-movie {
@@ -23,8 +32,8 @@
   transition: background-color 2s;
 }
 
-.Main__movielist{
-    display: flex;
-    flex-wrap: wrap;
-    width: 85%;
+.Main__movielist {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
 }
