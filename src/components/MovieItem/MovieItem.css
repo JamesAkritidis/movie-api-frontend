@@ -8,8 +8,14 @@
   width: 16rem;
   border: 0.2rem solid black;
   border-radius: 5px;
+  box-shadow: 3px 3px 8px rgb(0, 0, 0);
   background-color: var(--color-secondary);
   color: var(--color-primary);
+}
+
+.MovieItem:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
 }
 
 .MovieItem__poster {
@@ -27,6 +33,7 @@
   background-color: #e1d89e;
   height: 20px;
   color: black;
+  cursor: pointer;
 }
 /* .MovieItem{
     display: grid;

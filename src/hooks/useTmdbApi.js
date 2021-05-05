@@ -59,9 +59,7 @@ function useTmdbData(movieSearch, userid) {
                 crew.job === "Writer"
         );
         const cast = creditsData.cast.slice(0, 3);
-        console.log(screenwriters);
-        console.log(cast);
-        console.log(directors);
+
         setMovieData({
             title: basicData.title,
             year: basicData.release_date.slice(0, 4),
@@ -74,7 +72,7 @@ function useTmdbData(movieSearch, userid) {
                 .join(", "),
             cast: cast.map((actor) => actor.name).join(", "),
             imdblink: `https://www.imdb.com/title/${basicData.imdb_id}`,
-            poster: `${baseUrl}w92/${basicData.poster_path}`,
+            poster: `${baseUrl}w500/${basicData.poster_path}`,
             watched: false,
             userid: userid,
         });

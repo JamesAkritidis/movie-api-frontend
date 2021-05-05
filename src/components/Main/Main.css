@@ -1,3 +1,38 @@
+.Main {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(
+      0deg,
+      rgba(122, 190, 181, 0.8),
+      rgba(114, 181, 176, 0.8),
+      rgba(93, 158, 162, 0.8),
+      rgba(73, 127, 140, 0.8),
+      rgba(55, 93, 110, 0.8),
+      rgba(40, 60, 78, 0.8),
+      rgba(27, 34, 49, 0.8),
+      rgba(16, 16, 30, 0.8),
+      rgba(9, 6, 23, 0.8)
+    ),
+    url(./dark-background.jpg);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  align-items: center;
+  flex: 0.85;
+
+  border: black 1px solid;
+
+}
+
+.NewMovieSearch {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 0;
+}
+
 .Main__inputModal {
   display: flex;
   position: absolute;
@@ -9,20 +44,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.Main__button--new-movie {
-  width: 20rem;
-  height: 5rem;
-  padding: 1rem;
-  margin: 3rem;
-  background: #e1d89f;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-.Main__button--new-movie:hover {
-  background-color: #d89216;
-  transition: background-color 2s;
-}
+
 
 .Main__movielist {
   display: flex;

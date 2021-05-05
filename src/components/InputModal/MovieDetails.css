@@ -1,0 +1,105 @@
+/* ********* GENERAL STYLES */
+
+.MovieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 60%;
+    height: 90%;
+    top: 0%;
+    left: 20%;
+    background-image: linear-gradient(
+        0deg,
+        rgba(122, 190, 181, 0.9),
+        rgba(114, 181, 176, 0.9),
+        rgba(93, 158, 162, 0.9),
+        rgba(73, 127, 140, 0.9),
+        rgba(55, 93, 110, 0.9),
+        rgba(40, 60, 78, 0.9),
+        rgba(27, 34, 49, 0.9),
+        rgba(16, 16, 30, 0.9),
+        rgba(9, 6, 23, 0.9)
+      ),
+      url(./download.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    border-radius: 2rem;
+    min-width: 25rem;
+    justify-content: center;
+    margin: auto;
+    z-index: 100;
+  }
+  
+  .NewMovieInput__btn--add {
+    background: linear-gradient(
+      90deg,
+      rgba(157, 132, 132, 1) 0%,
+      rgba(122, 190, 181, 0.8463760504201681) 50%,
+      rgba(9, 6, 23, 0.7231267507002801) 100%
+    );
+    color: white;
+    width: 50%;
+    font-size: 1.8rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    position: relative;
+    left: 25%;
+  }
+  
+
+/* *************** MOVIE INFO STYLES ******************** */
+
+.movie-attributes__poster-info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .movie-attributes {
+    margin: auto;
+    color: white;
+    font-size: 1.6rem;
+  }
+  .movie-attributes--title {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: white;
+    text-align: left;
+  }
+  .movie-attributes--poster {
+    width: 14rem;
+  }
+  
+  .NewMovie__search {
+    height: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border-radius: 1.5rem;
+  }
+  
+  .imdb-icon > a {
+    color: gold !important;
+    font-size: 5rem;
+  }
+  .movie-overview {
+    flex-wrap: wrap;
+  }
+  
+  /* ********* CLOSE BUTTON ************ */
+  
+  .InputModal__btn--close {
+    background: rgba(38, 226, 195, 0.959);
+    width: 11%;
+    height: 4rem;
+    border-radius: 1.5rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    min-height: 3rem;
+    min-width: 6rem;
+  }
+  .InputModal__btn--close:hover {
+    background: rgba(22, 129, 111, 0.959);
+    transition: 0.5s ease-in;
+  }
+    
