@@ -7,7 +7,8 @@ function NewMovieSearch({
     searchResults,
     selectMovie,
     movieSearch,
-    toggleInputModal,
+    toggleMovieDetails,
+    setWatchlistMovie,
 }) {
     const [selectedSearchResult, setSelectedSearchResult] = useState(0);
 
@@ -27,9 +28,12 @@ function NewMovieSearch({
                 );
                 break;
             case "Enter":
+                toggleMovieDetails(true);
                 selectMovie(selectedSearchResult);
                 setSelectedSearchResult(0);
                 setMovieSearch("");
+                setWatchlistMovie(false);
+                toggleMovieDetails(true);
                 break;
             default:
                 break;
@@ -40,6 +44,8 @@ function NewMovieSearch({
         selectMovie(e.target.parentElement.dataset.value);
         setSelectedSearchResult(0);
         setMovieSearch("");
+        setWatchlistMovie(false);
+        toggleMovieDetails(true);
     };
 
     return (
@@ -54,7 +60,7 @@ function NewMovieSearch({
             />
             <button
                 className="NewMovieSearch__button"
-                onClick={() => toggleInputModal(true)}
+                onClick={() => toggleMovieDetails(true)}
             >
                 <RiAddFill size={30} />
             </button>

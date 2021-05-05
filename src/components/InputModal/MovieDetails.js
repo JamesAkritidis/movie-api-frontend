@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAddMovie from "../../hooks/useAddMovie";
-import "./NewMovieInput.css";
+import "./MovieDetails.css";
 import { SiImdb } from "react-icons/si";
 
-function NewMovieInput({ movieData }) {
+function MovieDetails({ toggleMovieDetails, movieData }) {
     const { userid } = useParams();
+
     const [movieInput, addMovie, setMovieInput] = useAddMovie(userid);
+
+    const closeModal = () => {
+        toggleMovieDetails(false);
+    };
 
     useEffect(() => {
         if (movieData) {
@@ -15,7 +20,10 @@ function NewMovieInput({ movieData }) {
     }, [movieData]);
 
     return (
-        <div className="NewMovieInput">
+        <div className="MovieDetails">
+            <button className="InputModal__btn--close" onClick={closeModal}>
+                Close
+            </button>
             {movieData.title ? (
                 <>
                     <div className="movie-attributes--title">
@@ -85,4 +93,4 @@ function NewMovieInput({ movieData }) {
     );
 }
 
-export default NewMovieInput;
+export default MovieDetails;
