@@ -44,10 +44,12 @@
 
 .movie-attributes__poster-info {
   display: flex;
+  flex-wrap: wrap;
 }
 .movie-attributes {
+  margin: auto;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .movie-attributes--title {
   font-size: 2.4rem;
@@ -64,6 +66,14 @@
   font-size: 1.8rem;
   text-align: center;
   border-radius: 1.5rem;
+}
+
+.imdb-icon > a {
+  color: gold !important;
+  font-size: 5rem;
+}
+.movie-overview {
+  flex-wrap: wrap;
 }
 /*
 .NewMovieInput__btn--add {

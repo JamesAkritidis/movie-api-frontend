@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useAddMovie from "../../hooks/useAddMovie";
 import { movieSchema } from "../../utils/movieItemSchema";
 import "./NewMovieInput.css";
+import { SiImdb } from 'react-icons/si';
 
 function NewMovieInput({ movieData }) {
     const { userid } = useParams();
@@ -16,29 +17,7 @@ function NewMovieInput({ movieData }) {
 
     return (
         <div className="NewMovieInput">
-            {/* {movieSchema.map((movieAttribute, index) => (
-                <div className="NewMovieInput__input">
-                    <label for={movieAttribute.name}>
-                        {movieAttribute.name}
-                    </label>
-                    <input
-                        className="NewMovieInput__input__field"
-                        key={index}
-                        type={movieAttribute.type}
-                        name={movieAttribute.name}
-                        id={movieAttribute.name}
-                        placeholder={`add a ${movieAttribute.name}`}
-                        onChange={(e) =>
-                            setMovieInput({
-                                ...movieInput,
-                                [movieAttribute.name]: e.target.value,
-                            })
-                        }
-                        value={movieInput[movieAttribute.name]}
-                    />
 
-                </div>
-            ))} */}
                     { movieData.title ? 
                         (
                          <>
@@ -52,20 +31,23 @@ function NewMovieInput({ movieData }) {
                     <div className="movie-attributes__info">
                         <div className="movie-attributes" >
                             {movieData.runtime} min</div>
-                        <div className="movie-attributes" >
-                            {movieData.genres}</div>
-                        <div className="movie-attributes" >
-                            {movieData.overview}</div>
-                        <div className="movie-attributes" >
-                            {movieData.screenwriter}</div>
-                        <div className="movie-attributes" >
-                            {movieData.cast}</div>
-                        <div className="movie-attributes" >
-                            {movieData.imdblink}</div>
+                        {movieData.genres? <div className="movie-attributes" >
+                            Genre:{movieData.genres}</div> : ''}
+                            {movieData.director.length? <div className="movie-attributes" >
+                            Director: {movieData.director}</div> : ''}
+                        {movieData.screenwriter.length? <div className="movie-attributes" >
+                            Screenwriter: {movieData.screenwriter}</div> : ''}
+                        {movieData.cast? <div className="movie-attributes" >
+                            Cast: {movieData.cast}</div> : ''}
+                        <div className="movie-attributes imdb-icon" >
+                            <a href={movieData.imdblink}>
+                            <SiImdb /></a></div>
                         <div className="movie-attributes" >
                             {movieData.watched}</div>
                         </div>
                     </div>
+                        <div className="movie-attributes movie-overview" >
+                            {movieData.overview}</div>
                     <input
                 className="NewMovieInput__btn--add"
                 type="submit"
@@ -161,3 +143,26 @@ export default NewMovieInput;
 //         }
 //         value={movieInput.rating}
 //     />
+            {/* {movieSchema.map((movieAttribute, index) => (
+                <div className="NewMovieInput__input">
+                    <label for={movieAttribute.name}>
+                        {movieAttribute.name}
+                    </label>
+                    <input
+                        className="NewMovieInput__input__field"
+                        key={index}
+                        type={movieAttribute.type}
+                        name={movieAttribute.name}
+                        id={movieAttribute.name}
+                        placeholder={`add a ${movieAttribute.name}`}
+                        onChange={(e) =>
+                            setMovieInput({
+                                ...movieInput,
+                                [movieAttribute.name]: e.target.value,
+                            })
+                        }
+                        value={movieInput[movieAttribute.name]}
+                    />
+
+                </div>
+            ))} */}

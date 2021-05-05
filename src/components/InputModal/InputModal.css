@@ -4,9 +4,9 @@
   align-items: center;
   position: absolute;
   width: 40%;
-  height: 65%;
-  top: 30%;
-  left: 30%;
+  height: 50%;
+  top: 0%;
+  left: 20%;
   background-image: linear-gradient(
       0deg,
       rgba(122, 190, 181, 0.9),
@@ -24,6 +24,9 @@
   background-position: center;
   padding: 3rem;
   border-radius: 2rem;
+  min-width: 25rem;
+  justify-content: center;
+  margin: auto;
 }
 .InputModal {
   /* background: linear-gradient(
@@ -49,7 +52,7 @@
   position: absolute;
   border-radius: 4rem; */
 }
-
+/* 
 .InputModal__btn--close {
   position: absolute;
   margin: 2rem;
@@ -57,8 +60,8 @@
   right: 2rem;
   height: 4rem;
   width: 6rem;
-  font-size: 18px;
-}
+  font-size: 1.8rem;
+} */
 
 .InputModal__search {
   height: 5rem;
@@ -87,9 +90,14 @@
 }
 .InputModal__btn--close {
   background: rgba(38, 226, 195, 0.959);
-  width: 10rem;
-  height: 4.5rem;
+  width: 11%;
+  height: 4rem;
   border-radius: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  min-height: 3rem;
+  min-width: 6rem;
 }
 .InputModal__btn--close:hover {
   background: rgba(22, 129, 111, 0.959);
