@@ -75,6 +75,7 @@ function NewMovieSearch({
                                 key={i}
                                 index={i}
                                 data-value={i}
+                                data-newvalue={i}
                                 onKeyDown={selectSearchResult}
                                 onClick={handleClickSelection}
                             >
@@ -87,7 +88,7 @@ function NewMovieSearch({
                                 </div>
                             </div>
                         ))
-                        .slice(0, 5)}
+                        .slice(0, 8)}
             </div>
         </div>
     );

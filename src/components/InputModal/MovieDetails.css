@@ -5,12 +5,11 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    width: 60%;
-    height: 90%;
-    top: 0%;
+    width: 50%;
+    top: 10%;
     left: 20%;
     background-image: linear-gradient(
-        0deg,
+        180deg,
         rgba(122, 190, 181, 0.9),
         rgba(114, 181, 176, 0.9),
         rgba(93, 158, 162, 0.9),
@@ -22,9 +21,11 @@
         rgba(9, 6, 23, 0.9)
       ),
       url(./download.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 3rem;
+    
+      background-size: cover;
+      background-position: center;
+      background-color: var(--color-background);
+    padding: 1rem;
     border-radius: 2rem;
     min-width: 25rem;
     justify-content: center;
@@ -42,6 +43,7 @@
     color: white;
     width: 50%;
     font-size: 1.8rem;
+    font-family: var(--font-sans-serif);
     height: 3rem;
     border-radius: 1.5rem;
     position: relative;
@@ -52,37 +54,85 @@
 /* *************** MOVIE INFO STYLES ******************** */
 
 .movie-attributes__poster-info {
+    width: 100%;  
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
   .movie-attributes {
-    margin: auto;
-    color: white;
-    font-size: 1.6rem;
+    position: relative;
+    width: 100%;
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--font-sans-serif);
+    text-align: right;
+    margin: 0.6rem;
+  padding: 0.3rem;
+    padding-left: 10rem;
+  
+    background-color: var(--color-secondary);
+    border: 1px solid black;
+    border-radius: 5px;
   }
+
+  .movie-attributes__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    height: 2.4rem;
+    width: 9rem;
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    background-color: var(--color-background);
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
   .movie-attributes--title {
+    margin-bottom: 2rem;
     font-size: 2.4rem;
     font-weight: 800;
     color: white;
-    text-align: left;
   }
   .movie-attributes--poster {
-    width: 14rem;
+    min-width: 20rem;
+    margin: 0.5rem;
   }
-  
-  .NewMovie__search {
-    height: 3rem;
-    font-size: 1.8rem;
-    text-align: center;
-    border-radius: 1.5rem;
+    
+  .movie-attributes--imdb-and-watched {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
-  
+
+  .movie-attributes--watched {
+    width: 15rem;
+    background-color: var(--color-highlight);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.3rem 1rem;
+  }
+
   .imdb-icon > a {
     color: gold !important;
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .movie-overview {
-    flex-wrap: wrap;
+    width: 100%;
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--font-sans-serif);
+    text-align: right;
+    margin: 0.3rem;
+  padding: 0.3rem;
+  background-color: var(--color-secondary);
+    border: 1px solid black;
+    border-radius: 5px;
   }
   
   /* ********* CLOSE BUTTON ************ */
@@ -93,6 +143,7 @@
     height: 4rem;
     border-radius: 1.5rem;
     position: absolute;
+    z-index: 999;
     top: 2rem;
     right: 2rem;
     min-height: 3rem;

@@ -35,50 +35,75 @@ function MovieDetails({ toggleMovieDetails, movieData }) {
                             className="movie-attributes--poster"
                         />
                         <div className="movie-attributes__info">
+                            <div className="movie-attributes--imdb-and-watched">
+                                <div className="movie-attributes movie-attributes--watched">
+                                    <label
+                                        htmlFor="watched"
+                                        className="watched__label"
+                                    >
+                                        I have watched this
+                                    </label>
+                                    <input
+                                        type="checkbox"
+                                        id="watched"
+                                        value={movieData.watched}
+                                    />
+                                </div>
+                            </div>
                             <div className="movie-attributes">
+                                <div className="movie-attributes__category">
+                                    Runtime
+                                </div>
                                 {movieData.runtime} min
                             </div>
                             {movieData.genres ? (
                                 <div className="movie-attributes">
-                                    Genre:{movieData.genres}
+                                    <div className="movie-attributes__category">
+                                        Genre
+                                    </div>
+                                    {movieData.genres}
                                 </div>
                             ) : (
                                 ""
                             )}
                             {movieData.director.length ? (
                                 <div className="movie-attributes">
-                                    Director: {movieData.director}
+                                    <div className="movie-attributes__category">
+                                        Director
+                                    </div>
+                                    {movieData.director}
                                 </div>
                             ) : (
                                 ""
                             )}
                             {movieData.screenwriter.length ? (
                                 <div className="movie-attributes">
-                                    Screenwriter: {movieData.screenwriter}
+                                    <div className="movie-attributes__category">
+                                        Screenwriter
+                                    </div>
+                                    {movieData.screenwriter}
                                 </div>
                             ) : (
                                 ""
                             )}
-                            {movieData.cast ? (
+                            {movieData.moviecast ? (
                                 <div className="movie-attributes">
-                                    Cast: {movieData.cast}
+                                    <div className="movie-attributes__category">
+                                        Cast
+                                    </div>
+                                    {movieData.moviecast}
                                 </div>
                             ) : (
                                 ""
                             )}
-                            <div className="movie-attributes imdb-icon">
+                            <div className="imdb-icon">
                                 <a href={movieData.imdblink}>
                                     <SiImdb />
                                 </a>
                             </div>
-                            <div className="movie-attributes">
-                                {movieData.watched}
-                            </div>
                         </div>
                     </div>
-                    <div className="movie-attributes movie-overview">
-                        {movieData.overview}
-                    </div>
+                    <div className="movie-overview">{movieData.overview}</div>
                     <input
                         className="NewMovieInput__btn--add"
                         type="submit"
