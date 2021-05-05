@@ -74,7 +74,7 @@ function useTmdbData(movieSearch, userid) {
                 .join(", "),
             cast: cast.map((actor) => actor.name).join(", "),
             imdblink: `https://www.imdb.com/title/${basicData.imdb_id}`,
-            poster: `${baseUrl}w92/${basicData.poster_path}`,
+            poster: `${baseUrl}w500/${basicData.poster_path}`,
             watched: false,
             userid: userid,
         });

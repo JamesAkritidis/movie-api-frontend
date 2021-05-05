@@ -1,0 +1,49 @@
+
+.NewMovieSearch__input {
+      width: 20rem;
+      height: 4rem;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      outline: none;
+  }
+  
+  .NewMovieSearch__button {
+    background: #d89216;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    cursor: pointer;
+  }
+
+  .NewMovieSearch__button:hover {
+    background-color: #d89216;
+    transition: background-color 0.5s;
+  }
+
+.SearchResults {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    position: absolute;
+    top: 6rem;
+    right: 12rem;
+    box-shadow: 0px 0px 5px 2px black;  
+}
+  
+  .SearchResult {
+    width: 100%;
+    background-color:hsl(201, 13%, 51%);
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--font-sans-serif);
+    padding: 0.5rem;
+    border: 0.1rem solid black;
+    z-index: 100;
+  }
+  
+  .selected {
+    background-color: var(--color-highlight);
+  }
+  

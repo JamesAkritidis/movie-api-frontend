@@ -11,24 +11,3 @@
   margin: 0.2em 0;
   height: 25px;
 }
-
-.SearchResults {
-  display: flex;
-  flex-direction: column;
-  width: 15rem;
-}
-
-.SearchResult {
-  width: 150%;
-  background-color: white;
-  color: black;
-  font-size: 1.7rem;
-  border: 0.1rem solid black;
-  background: hsl(66, 70%, 51%);
-  z-index: 100;
-}
-
-.selected {
-  background-color: grey;
-  height: 25px;
-}
