@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   font-size: 1.6rem;
+  font-family: var(--font-sans-serif);
   margin: 1rem 1rem;
   padding: 0.5rem;
   width: 16rem;
@@ -26,7 +27,7 @@
 .MovieItem__info {
   display: flex;
   flex-direction: column;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .delete-icon {
