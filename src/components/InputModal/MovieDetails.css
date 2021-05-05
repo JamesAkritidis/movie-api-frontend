@@ -29,6 +29,7 @@
     min-width: 25rem;
     justify-content: center;
     margin: auto;
+    z-index: 100;
   }
   
   .NewMovieInput__btn--add {

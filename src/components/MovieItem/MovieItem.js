@@ -33,10 +33,10 @@ function MovieItem({
     return (
         <div className="MovieItem" onClick={showMovie}>
             <div>
-                <button className="delete-movie">
+                <div className="delete-movie">
                     {" "}
                     <VscTrash className="delete-icon" onClick={deleteMovie} />
-                </button>
+                </div>
             </div>
             <img
                 src={movie.poster}

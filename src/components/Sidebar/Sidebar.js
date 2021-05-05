@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import useUsersFetch from "../../hooks/useUsersFetch";
 import "./Sidebar.css";
 
@@ -8,18 +8,22 @@ function Sidebar() {
 
     return (
         <div className="Sidebar">
-            {users &&
-                users.map((user, index) => (
-                    <NavLink
-                        key={index}
-                        to={String(user.userid)} //creates route to /:userid
-                        activeStyle={{
-                            color: "red",
-                        }}
-                    >
-                        <h3 className="Sidebar__name">{user.name}</h3>
-                    </NavLink>
+            <div className="movie-logo"> {/* <h4>Watch List</h4> */}</div>
+            <div className="sidebar__navlink">
+                {users.map((user) => (
+                    <div className="sidebar-user">
+                        <NavLink
+                            className="navlink"
+                            to={String(user.userid)} //creates route to /:userid
+                            activeStyle={{
+                                color: "Green",
+                            }}
+                        >
+                            <h3 className="Sidebar__name">{user.name}</h3>
+                        </NavLink>
+                    </div>
                 ))}
+            </div>
         </div>
     );
 }
