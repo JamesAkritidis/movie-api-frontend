@@ -16,7 +16,7 @@ function NewMovieInput({ movieData }) {
 
     return (
         <div className="NewMovieInput">
-            {movieSchema.map((movieAttribute, index) => (
+            {/* {movieSchema.map((movieAttribute, index) => (
                 <div className="NewMovieInput__input">
                     <label for={movieAttribute.name}>
                         {movieAttribute.name}
@@ -36,15 +36,46 @@ function NewMovieInput({ movieData }) {
                         }
                         value={movieInput[movieAttribute.name]}
                     />
-                </div>
-            ))}
 
-            <input
+                </div>
+            ))} */}
+                    { movieData.title ? 
+                        (
+                         <>
+                            <div className="movie-attributes--title" >
+                        {movieData.title} (
+                        {movieData.year})
+                        </div>
+                    <div className="movie-attributes__poster-info">
+
+                    <img src={movieData.poster} className="movie-attributes--poster" />
+                    <div className="movie-attributes__info">
+                        <div className="movie-attributes" >
+                            {movieData.runtime} min</div>
+                        <div className="movie-attributes" >
+                            {movieData.genres}</div>
+                        <div className="movie-attributes" >
+                            {movieData.overview}</div>
+                        <div className="movie-attributes" >
+                            {movieData.screenwriter}</div>
+                        <div className="movie-attributes" >
+                            {movieData.cast}</div>
+                        <div className="movie-attributes" >
+                            {movieData.imdblink}</div>
+                        <div className="movie-attributes" >
+                            {movieData.watched}</div>
+                        </div>
+                    </div>
+                    <input
                 className="NewMovieInput__btn--add"
                 type="submit"
                 value="Submit the movie"
                 onClick={addMovie}
             />
+                    </>
+                    ) : ''
+                    }
+
         </div>
     );
 }
