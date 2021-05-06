@@ -8,8 +8,7 @@ function useAddMovie(userid) {
         userid: userid,
     });
 
-    const addMovie = (e) => {
-        e.preventDefault();
+    const addMovie = () => {
         axios
             .post(`http://localhost:5000/users/${userid}/movies`, movieInput)
             .then((response) => {
@@ -20,7 +19,7 @@ function useAddMovie(userid) {
             });
     };
 
-    return [movieInput, addMovie, setMovieInput];
+    return [addMovie, setMovieInput];
 }
 
 export default useAddMovie;

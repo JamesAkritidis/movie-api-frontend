@@ -33,23 +33,7 @@
     z-index: 100;
   }
   
-  .NewMovieInput__btn--add {
-    background: linear-gradient(
-      90deg,
-      rgba(157, 132, 132, 1) 0%,
-      rgba(122, 190, 181, 0.8463760504201681) 50%,
-      rgba(9, 6, 23, 0.7231267507002801) 100%
-    );
-    color: white;
-    width: 50%;
-    font-size: 1.8rem;
-    font-family: var(--font-sans-serif);
-    height: 3rem;
-    border-radius: 1.5rem;
-    position: relative;
-    left: 25%;
-  }
-  
+
 
 /* *************** MOVIE INFO STYLES ******************** */
 
@@ -59,15 +43,23 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .movie-attributes--poster {
+    display: flex;
+    max-width: 15rem;
+    margin: 0.5rem;
+  }
+    
   .movie-attributes {
     position: relative;
+    display: flex;
     width: 100%;
     color: black;
     font-size: 1.2rem;
     font-family: var(--font-sans-serif);
     text-align: right;
     margin: 0.6rem;
-  padding: 0.3rem;
+    padding: 0.3rem;
     padding-left: 10rem;
   
     background-color: var(--color-secondary);
@@ -97,15 +89,12 @@
     font-weight: 800;
     color: white;
   }
-  .movie-attributes--poster {
-    min-width: 20rem;
-    margin: 0.5rem;
-  }
-    
   .movie-attributes--imdb-and-watched {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin: 1rem;
   }
 
   .movie-attributes--watched {
@@ -114,20 +103,27 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0.3rem 1rem;
+    padding: 0.3rem;
   }
 
-  .imdb-icon > a {
-    color: gold !important;
+  .movie-attributes__imdb-icon {
+    background-color: black;
+    width: 4rem;
+    height: 4rem;
+    border-radius: .5rem;
+  }
+
+  .movie-attributes__imdb-icon > a {
+    color: gold;
     font-size: 4rem;
+
   }
   .movie-overview {
     width: 100%;
     color: black;
     font-size: 1.2rem;
     font-family: var(--font-sans-serif);
-    text-align: right;
+    text-align: left;
     margin: 0.3rem;
   padding: 0.3rem;
   background-color: var(--color-secondary);
@@ -135,6 +131,60 @@
     border-radius: 5px;
   }
   
+/* *********************** BUTTONS ****************** */
+
+.delete-icon {
+  background-color:hsl(38, 82%, 47%) !important;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+  color: black;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.close-icon {
+  background-color:hsl(38, 82%, 47%) !important;
+  height: 4rem;
+  width: 4rem;
+  margin-left: 2rem;
+  color: black;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+
+.NewMovieInput__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.NewMovieInput__btn--add {
+  /* background: linear-gradient(
+    90deg,
+    rgba(157, 132, 132, 1) 0%,
+    rgba(122, 190, 181, 0.8463760504201681) 50%,
+    rgba(9, 6, 23, 0.7231267507002801) 100%
+  ); */
+  background-color: var(--color-highlight);
+  color: black;
+  width: 16rem;
+  padding: 0.3rem;
+  font-size: 1.6rem;
+  font-family: var(--font-sans-serif);
+  text-align: center;
+  border-radius: 1.5rem;
+  border: 3px solid black;
+  position: relative;
+  cursor: pointer;
+}
+
+.NewMovieInput__btn--dismiss {
+  background-color: var(--color-secondary);
+}
+
+
+
   /* ********* CLOSE BUTTON ************ */
   
   .InputModal__btn--close {

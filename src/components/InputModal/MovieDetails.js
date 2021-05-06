@@ -1,29 +1,48 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useAddMovie from "../../hooks/useAddMovie";
+import useDeleteMovie from "../../hooks/useDeleteMovie";
 import "./MovieDetails.css";
-import { SiImdb } from "react-icons/si";
+import { FaImdb } from "react-icons/fa";
+import { VscTrash } from "react-icons/vsc";
+import { AiFillCloseCircle } from "react-icons/ai";
 
-function MovieDetails({ toggleMovieDetails, movieData }) {
+function MovieDetails({
+    toggleMovieDetails,
+    movieData,
+    setFetch,
+    watchlistMovie,
+}) {
     const { userid } = useParams();
 
-    const [movieInput, addMovie, setMovieInput] = useAddMovie(userid);
+    const [addMovie, setMovieInput] = useAddMovie(userid);
+    const deleteMovie = useDeleteMovie();
+
+    const deleteMovieFromWatchlist = () => {
+        deleteMovie(userid, movieData.movieid);
+        setTimeout(() => setFetch(true), 500);
+        toggleMovieDetails(false);
+    };
+
+    const addMovieToTheWatchlist = () => {
+        addMovie();
+        setTimeout(() => setFetch(true), 500);
+        toggleMovieDetails(false);
+    };
 
     const closeModal = () => {
         toggleMovieDetails(false);
+        setFetch(true);
     };
 
     useEffect(() => {
         if (movieData) {
             setMovieInput({ ...movieData });
         }
-    }, [movieData]);
+    }, [movieData, setMovieInput]);
 
     return (
         <div className="MovieDetails">
-            <button className="InputModal__btn--close" onClick={closeModal}>
-                Close
-            </button>
             {movieData.title ? (
                 <>
                     <div className="movie-attributes--title">
@@ -33,9 +52,15 @@ function MovieDetails({ toggleMovieDetails, movieData }) {
                         <img
                             src={movieData.poster}
                             className="movie-attributes--poster"
+                            alt={movieData.title}
                         />
                         <div className="movie-attributes__info">
                             <div className="movie-attributes--imdb-and-watched">
+                                <div className="movie-attributes__imdb-icon">
+                                    <a href={movieData.imdblink}>
+                                        <FaImdb className="imbd-icon" />
+                                    </a>
+                                </div>
                                 <div className="movie-attributes movie-attributes--watched">
                                     <label
                                         htmlFor="watched"
@@ -96,20 +121,39 @@ function MovieDetails({ toggleMovieDetails, movieData }) {
                             ) : (
                                 ""
                             )}
-                            <div className="imdb-icon">
-                                <a href={movieData.imdblink}>
-                                    <SiImdb />
-                                </a>
-                            </div>
                         </div>
                     </div>
                     <div className="movie-overview">{movieData.overview}</div>
-                    <input
-                        className="NewMovieInput__btn--add"
-                        type="submit"
-                        value="Submit the movie"
-                        onClick={addMovie}
-                    />
+                    <div className="NewMovieInput__buttons">
+                        {!watchlistMovie ? (
+                            <div>
+                                <div
+                                    className="NewMovieInput__btn--add"
+                                    onClick={(e) => addMovieToTheWatchlist(e)}
+                                >
+                                    Add movie
+                                </div>
+                                <div
+                                    className="NewMovieInput__btn--add NewMovieInput__btn--dismiss"
+                                    onClick={closeModal}
+                                >
+                                    Dissmiss Movie
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="delete-movie">
+                                {" "}
+                                <VscTrash
+                                    className="delete-icon"
+                                    onClick={deleteMovieFromWatchlist}
+                                />
+                                <AiFillCloseCircle
+                                    className="close-icon"
+                                    onClick={closeModal}
+                                />
+                            </div>
+                        )}
+                    </div>
                 </>
             ) : (
                 ""

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useMoviesFetch from "../../hooks/useMoviesFetch";
 import MovieItem from "../MovieItem/MovieItem";
@@ -10,13 +10,19 @@ import "./Main.css";
 
 function Main() {
     const { userid } = useParams();
-    const movies = useMoviesFetch(userid);
+    const [movies, setFetch] = useMoviesFetch(userid);
     const [showMovieDetails, toggleMovieDetails] = useState(false);
 
     const [movieSearch, setMovieSearch] = useState("");
     const [movieData, searchResults, selectMovie] = useTmdbApi(movieSearch);
     const [watchlistMovie, setWatchlistMovie] = useState(false);
     const [watchlistMovieData, setWatchlistMovieData] = useState({});
+
+    useEffect(() => {
+        setFetch(true);
+    }, [userid]);
+
+    console.log(userid);
 
     return (
         <div className="Main">
@@ -27,6 +33,8 @@ function Main() {
                             watchlistMovie ? watchlistMovieData : movieData
                         }
                         toggleMovieDetails={toggleMovieDetails}
+                        setFetch={setFetch}
+                        watchlistMovie={watchlistMovie}
                     />
                 </div>
             ) : (

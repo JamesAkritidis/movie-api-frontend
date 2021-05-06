@@ -1,7 +1,5 @@
 import React from "react";
 import "./MovieItem.css";
-import { VscTrash } from "react-icons/vsc";
-import axios from "axios";
 
 function MovieItem({
     movie,
@@ -9,21 +7,6 @@ function MovieItem({
     setWatchlistMovie,
     setWatchlistMovieData,
 }) {
-    const deleteMovie = (e) => {
-        e.preventDefault();
-        axios
-            .delete(
-                `http://localhost:5000/users/${movie.userid}/movies/${movie.movieid}`
-            )
-
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    };
-
     const showMovie = () => {
         setWatchlistMovieData(movie);
         setWatchlistMovie(true);
@@ -32,12 +15,6 @@ function MovieItem({
 
     return (
         <div className="MovieItem" onClick={showMovie}>
-            <div>
-                <div className="delete-movie">
-                    {" "}
-                    <VscTrash className="delete-icon" onClick={deleteMovie} />
-                </div>
-            </div>
             <img
                 src={movie.poster}
                 alt={`Poster ${movie.title}`}
