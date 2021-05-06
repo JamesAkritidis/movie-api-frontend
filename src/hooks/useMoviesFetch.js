@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import API_ROOT from "../utils/constants"
 
 function useMoviesFetch(userid) {
     const [movies, setMovies] = useState([]);
@@ -9,7 +10,7 @@ function useMoviesFetch(userid) {
     useEffect(() => {
         if (fetch) {
             axios
-                .get(`http://localhost:5000/users/${userid}/movies`)
+                .get(`${API_ROOT}users/${userid}/movies`)
                 .then((response) => {
                     setMovies(response.data);
                     setFetch(false);

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { movieItem } from "../utils/movieItemSchema";
+import API_ROOT from "../utils/constants"
 
 function useAddMovie(userid) {
     const [movieInput, setMovieInput] = useState({
@@ -10,7 +11,7 @@ function useAddMovie(userid) {
 
     const addMovie = () => {
         axios
-            .post(`http://localhost:5000/users/${userid}/movies`, movieInput)
+            .post(`${API_ROOT}users/${userid}/movies`, movieInput)
             .then((response) => {
                 console.log(response);
             })
