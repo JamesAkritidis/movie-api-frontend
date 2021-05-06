@@ -10,7 +10,7 @@ function useMoviesFetch(userid) {
     useEffect(() => {
         if (fetch) {
             axios
-                .get(`${API_ROOT}users/${userid}/movies`)
+                .get(`https://movie-picker-backend.herokuapp.com/users/${userid}/movies`)
                 .then((response) => {
                     setMovies(response.data);
                     setFetch(false);
