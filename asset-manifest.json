@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/movie-api-frontend/static/css/main.e08407a6.chunk.css",
+    "main.js": "/movie-api-frontend/static/js/main.ae8f27eb.chunk.js",
+    "main.js.map": "/movie-api-frontend/static/js/main.ae8f27eb.chunk.js.map",
+    "runtime-main.js": "/movie-api-frontend/static/js/runtime-main.793b3608.js",
+    "runtime-main.js.map": "/movie-api-frontend/static/js/runtime-main.793b3608.js.map",
+    "static/js/2.3d51bb87.chunk.js": "/movie-api-frontend/static/js/2.3d51bb87.chunk.js",
+    "static/js/2.3d51bb87.chunk.js.map": "/movie-api-frontend/static/js/2.3d51bb87.chunk.js.map",
+    "index.html": "/movie-api-frontend/index.html",
+    "static/css/main.e08407a6.chunk.css.map": "/movie-api-frontend/static/css/main.e08407a6.chunk.css.map",
+    "static/js/2.3d51bb87.chunk.js.LICENSE.txt": "/movie-api-frontend/static/js/2.3d51bb87.chunk.js.LICENSE.txt",
+    "static/media/Main.css": "/movie-api-frontend/static/media/dark-background.d8940fbc.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.793b3608.js",
+    "static/js/2.3d51bb87.chunk.js",
+    "static/css/main.e08407a6.chunk.css",
+    "static/js/main.ae8f27eb.chunk.js"
+  ]
+}
