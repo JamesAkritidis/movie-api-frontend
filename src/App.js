@@ -12,8 +12,8 @@ function App() {
             <div className="App__main-and-sidebar">
                 <Sidebar />
                 <Switch>
-                    <Route exact path="/movie-api-frontend"></Route>
-                    <Route path="/movie-api-frontend/:userid">
+                    <Route exact path="/"></Route>
+                    <Route path="/:userid">
                         <Main />
                     </Route>
                 </Switch>
