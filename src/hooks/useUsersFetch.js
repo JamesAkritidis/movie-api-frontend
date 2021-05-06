@@ -7,7 +7,7 @@ function useUsersFetch() {
 
     useEffect(() => {
         axios
-            .get(`${API_ROOT}users`) //this url returns a Json object with the user data
+            .get(`https://movie-picker-backend.herokuapp.com/users`) //this url returns a Json object with the user data
             .then((response) => {
                 setUsers(response.data);
             })
