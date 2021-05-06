@@ -1,10 +1,11 @@
 import React from "react";
 import axios from "axios";
+import API_ROOT from "../utils/constants"
 
 function useDeleteMovie() {
     const deleteMovie = (userid, movieid) => {
         axios
-            .delete(`http://localhost:5000/users/${userid}/movies/${movieid}`)
+            .delete(`${API_ROOT}users/${userid}/movies/${movieid}`)
 
             .then((response) => {
                 console.log(response);
